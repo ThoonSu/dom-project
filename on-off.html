@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Toggle Light Bulb</title>
+    <style>
+      .container {
+        text-align: center;
+        margin: 50px;
+      }
+      button {
+        padding: 5px 25px;
+        border-radius: 5px;
+        border: none;
+        outline: none;
+        background-color: blue;
+        color: white;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Toggle Light Bulb</h1>
+      <img
+        id="bulb"
+        src="https://www.w3schools.com/js/pic_bulboff.gif"
+        width="100"
+      />
+      <br />
+      <button onclick="toggleBulb()">ON</button>
+    </div>
+
+    <script>
+      function toggleBulb() {
+        let button = document.querySelector("button");
+        let bulb = document.getElementById("bulb");
+
+        if (button.innerText === "ON") {
+          bulb.src = "https://www.w3schools.com/js/pic_bulbon.gif";
+          button.innerText = "OFF";
+        } else {
+          bulb.src = "https://www.w3schools.com/js/pic_bulboff.gif";
+          button.innerText = "ON";
+        }
+      }
+    </script>
+  </body>
+</html>
